@@ -1,0 +1,263 @@
+@import "tailwindcss";
+@import "../../vendor/livewire/flux/dist/flux.css";
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
+@source '../../vendor/livewire/flux/stubs/**/*.blade.php';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+
+    --color-zinc-50: #fafafa;
+    --color-zinc-100: #f5f5f5;
+    --color-zinc-200: #e5e5e5;
+    --color-zinc-300: #d4d4d4;
+    --color-zinc-400: #a3a3a3;
+    --color-zinc-500: #737373;
+    --color-zinc-600: #525252;
+    --color-zinc-700: #404040;
+    --color-zinc-800: #262626;
+    --color-zinc-900: #171717;
+    --color-zinc-950: #0a0a0a;
+
+    --color-primary-50: #f0f9ff;
+    --color-primary-100: #e0f3fe;
+    --color-primary-200: #b9e8fe;
+    --color-primary-300: #7cd6fd;
+    --color-primary-400: #36c3fa;
+    --color-primary-500: #0cabeb;
+    --color-primary-600: #0091d4;
+    --color-primary-700: #016da3;
+    --color-primary-800: #065c86;
+    --color-primary-900: #0b4c6f;
+    --color-primary-950: #07314a;
+
+    --color-gold-50: #fefde8;
+    --color-gold-100: #fffcc2;
+    --color-gold-200: #fff588;
+    --color-gold-300: #ffe845;
+    --color-gold-400: #fdd406;
+    --color-gold-500: #edbd05;
+    --color-gold-600: #cd9201;
+    --color-gold-700: #a36805;
+    --color-gold-800: #87510c;
+    --color-gold-900: #724211;
+    --color-gold-950: #432205;
+
+    --color-primary-50: #f0f9ff;
+    --color-primary-100: #e0f3fe;
+    --color-primary-200: #b9e8fe;
+    --color-primary-300: #7cd6fd;
+    --color-primary-400: #36c3fa;
+    --color-primary-500: #0cabeb;
+    --color-primary-600: #0091d4;
+    --color-primary-700: #016da3;
+    --color-primary-800: #065c86;
+    --color-primary-900: #0b4c6f;
+    --color-primary-950: #07314a;
+
+    --color-cinnabar-50: #fef3f2;
+    --color-cinnabar-100: #fee5e2;
+    --color-cinnabar-200: #fed0ca;
+    --color-cinnabar-300: #fbb0a6;
+    --color-cinnabar-400: #f78172;
+    --color-cinnabar-500: #ec4732;
+    --color-cinnabar-600: #db3b27;
+    --color-cinnabar-700: #b82e1d;
+    --color-cinnabar-800: #982a1c;
+    --color-cinnabar-900: #7e291e;
+    --color-cinnabar-950: #45110a;
+
+    --color-accent: var(--color-neutral-800);
+    --color-accent-content: var(--color-neutral-800);
+    --color-accent-foreground: var(--color-white);
+}
+
+@layer theme {
+    .dark {
+        --color-accent: var(--color-white);
+        --color-accent-content: var(--color-white);
+        --color-accent-foreground: var(--color-neutral-800);
+    }
+}
+
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
+
+.trix-zone :where(ol, ul) {
+    @apply list-outside ps-6;
+}
+
+.trix-zone ol {
+    @apply list-decimal;
+}
+
+.trix-zone ul {
+    @apply list-disc;
+}
+
+.trix-zone blockquote {
+    border: 0 solid #ccc;
+    border-left-width: 0px;
+    border-left-width: 0.3em;
+    margin-left: 0.3em;
+    padding-left: 0.6em;
+}
+
+.trix-zone pre {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    font-family: monospace;
+    font-size: 1.5em;
+    padding: 0.5em;
+    white-space: pre;
+    background-color: #eee;
+    overflow-x: auto;
+}
+
+.dark .trix-button {
+    @apply !bg-white;
+}
+
+trix-editor {
+    @apply w-full resize-y overflow-auto min-h-[250px];
+}
+
+.dark trix-editor {
+    @apply bg-white/10 text-zinc-300 !border-white/10;
+}
+
+:where(trix-editor) h1 {
+    font-size: 1.25rem !important;
+    line-height: 1.25rem !important;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+:where(trix-editor) a:not(.no-underline) {
+    text-decoration: underline;
+}
+
+:where(trix-editor) a:visited {
+    color: green;
+}
+
+:where(trix-editor) ul {
+    list-style-type: disc;
+    padding-left: 1rem;
+}
+
+:where(trix-editor) ol {
+    list-style-type: decimal;
+    padding-left: 1rem;
+}
+
+:where(trix-editor) pre {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    font-family: monospace;
+    font-size: 1.5em;
+    padding: 0.5em;
+    white-space: pre;
+    background-color: #eee;
+    overflow-x: auto;
+}
+
+:where(trix-editor) blockquote {
+    border: 0 solid #ccc;
+    border-left-width: 0px;
+    border-left-width: 0.3em;
+    margin-left: 0.3em;
+    padding-left: 0.6em;
+}
+
+.disabled trix-toolbar [data-trix-button-group="file-tools"] {
+    @apply hidden;
+}
+
+.dark trix-toolbar button {
+    @apply bg-white;
+}
+
+[data-flux-field]:not(ui-radio, ui-checkbox) {
+    @apply grid gap-2;
+}
+
+[data-flux-label] {
+    @apply !mb-0 !leading-tight;
+}
+
+input:focus[data-flux-control],
+textarea:focus[data-flux-control],
+select:focus[data-flux-control] {
+    @apply outline-hidden ring-2 ring-accent ring-offset-2 ring-offset-accent-foreground;
+}
+
+/* \[:where(&)\]:size-4 {
+    @apply size-4;
+} */
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 0.25in;
+    }
+
+    html,
+    body {
+        padding: 0 !important;
+        margin: 0 !important;
+        height: auto !important;
+        background: white !important;
+        overflow: visible !important;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    * {
+        box-shadow: none !important;
+        -webkit-print-color-adjust: exact !important; /* Untuk Chrome */
+        print-color-adjust: exact !important; /* Untuk browser lain */
+    }
+
+    [data-area="print"],
+    [data-area="print"] * {
+        visibility: visible;
+    }
+
+    [data-area="print"] {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        display: block !important;
+        break-after: auto;
+        break-before: auto;
+        break-inside: auto;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    [data-no-print] {
+        display: none !important;
+    }
+
+    .page-break {
+        page-break-after: always;
+    }
+}

@@ -1,0 +1,1 @@
+<img src="{{ Vite::image('logo.png') }}" {{ $attributes->merge(['class']) }} />

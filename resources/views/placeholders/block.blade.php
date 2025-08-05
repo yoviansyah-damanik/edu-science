@@ -1,0 +1,1 @@
+<div class="h-48 max-h-full w-full rounded bg-slate-300 dark:bg-white animate-pulse"></div>
