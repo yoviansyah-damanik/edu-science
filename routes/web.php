@@ -2,26 +2,28 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/symlink', function () {
+    $target = storage_path('app/public'); // sumber asli
+    $link = public_path('storage');       // tujuan link di public/
+
+    if (file_exists($link)) {
+        return 'Symlink sudah ada.';
+    }
+
+    try {
+        symlink($target, $link);
+        return 'Symlink berhasil dibuat!';
+    } catch (\Exception $e) {
+        return 'Gagal membuat symlink: ' . $e->getMessage();
+    }
+});
+
 
 Route::middleware(['auth'])
     ->group(function () {
         Route::get('/', \App\Livewire\Home\Index::class)->name('home');
 
-        Route::get('/symlink', function () {
-            $target = storage_path('app/public'); // sumber asli
-            $link = public_path('storage');       // tujuan link di public/
 
-            if (file_exists($link)) {
-                return 'Symlink sudah ada.';
-            }
-
-            try {
-                symlink($target, $link);
-                return 'Symlink berhasil dibuat!';
-            } catch (\Exception $e) {
-                return 'Gagal membuat symlink: ' . $e->getMessage();
-            }
-        });
 
         Route::prefix('users-list')
             ->name('users-list.')
