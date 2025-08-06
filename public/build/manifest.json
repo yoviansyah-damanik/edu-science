@@ -1,0 +1,29 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-BCmsGWHo.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/images/auth-bg-2.png": {
+    "file": "assets/auth-bg-2--7KuC05-.png",
+    "src": "resources/images/auth-bg-2.png"
+  },
+  "resources/images/auth-bg.png": {
+    "file": "assets/auth-bg-DhSnHUOY.png",
+    "src": "resources/images/auth-bg.png"
+  },
+  "resources/images/logo-min.png": {
+    "file": "assets/logo-min-DclSKAFC.png",
+    "src": "resources/images/logo-min.png"
+  },
+  "resources/images/logo.png": {
+    "file": "assets/logo-DsLifyw0.png",
+    "src": "resources/images/logo.png"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CFeSwWEE.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
