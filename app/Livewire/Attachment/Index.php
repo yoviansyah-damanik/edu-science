@@ -14,7 +14,6 @@ class Index extends Component
     public Collection $items;
     public $selectedItem;
     public bool $inline;
-    public bool $deleted = false;
 
     public function mount(Collection $items, bool $inline = false, $deleted = false)
     {

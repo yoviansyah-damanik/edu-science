@@ -9,7 +9,10 @@ class Item extends Component
 {
     public $item;
     public bool $deleted;
-    public function mount($item, bool $deleted) {}
+    public function mount($item, bool $deleted)
+    {
+        $this->deleted = ($item->user_id == auth()->id()) || $deleted;
+    }
 
     public function render()
     {
