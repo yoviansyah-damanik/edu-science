@@ -31,7 +31,8 @@
                     @endphp
                     @foreach (range(2025, now()->year) as $year)
                         <flux:navlist.group :heading="$year" expandable :expanded="now()->year == $year">
-                            <flux:navlist.item :href="route('lesson-plans.index', ['semester' => 'odd', 'year' => $year])"
+                            <flux:navlist.item
+                                :href="route('lesson-plans.index', ['semester' => 'odd', 'year' => $year])"
                                 wire:navigate>
                                 {{ __('Odd') }}
                                 <x-slot name="badge">
@@ -39,7 +40,8 @@
                                 </x-slot>
                             </flux:navlist.item>
 
-                            <flux:navlist.item :href="route('lesson-plans.index', ['semester' => 'even', 'year' => $year])"
+                            <flux:navlist.item
+                                :href="route('lesson-plans.index', ['semester' => 'even', 'year' => $year])"
                                 wire:navigate>
                                 {{ __('Even') }}
                                 <x-slot name="badge">
@@ -124,9 +126,9 @@
                 <flux:navlist.item icon="shapes" :href="route('lesson-material-category')" wire:navigate>
                     {{ __('Lesson Material Category') }}
                 </flux:navlist.item>
-                <flux:navlist.item icon="users" href="https://github.com/laravel/livewire-starter-kit" wire:navigate>
+                {{-- <flux:navlist.item icon="users" href="https://github.com/laravel/livewire-starter-kit" wire:navigate>
                     {{ __('Users List') }}
-                </flux:navlist.item>
+                </flux:navlist.item> --}}
             </flux:navlist>
         @endif
 

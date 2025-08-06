@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             'name' => 'Administrator',
-            'email' => 'admin@myeduscience.id',
+            'email' => 'myeduscience@gmail.com',
             'password' => bcrypt('123456'),
         ])->assignRole('administrator');
 
@@ -67,7 +67,7 @@ class DatabaseSeeder extends Seeder
             'achievement' => 'Juara Umum OSN Tingkat Kabupaten',
             'study_hours' => '07.30 - 14.00',
             'postal_code' => '22733',
-            'district_name' => 'KABUPATEN TAPANULI SELATAN',
+            'district_name' => 'Kabupaten Tapanuli Selatan',
             'phone_number' => '+62 123456',
             'email' => 'smp4angkolatimur@gmail.com',
         ]);
