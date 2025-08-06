@@ -38,9 +38,18 @@ class DatabaseSeeder extends Seeder
         //     'password' => bcrypt('123456'),
         // ])->assignRole('teacher');
 
-        LessonMaterialCategory::create(['name' => 'Gaya']);
-        LessonMaterialCategory::create(['name' => 'Pesawat Sederhana']);
-        LessonMaterialCategory::create(['name' => 'Usaha']);
+        LessonMaterialCategory::create([
+            'name' => 'Gaya',
+            'description' => '-'
+        ]);
+        LessonMaterialCategory::create([
+            'name' => 'Pesawat Sederhana',
+            'description' => '-'
+        ]);
+        LessonMaterialCategory::create([
+            'name' => 'Usaha',
+            'description' => '-'
+        ]);
 
         $facilitiesInfrastructures = [
             'Gawai',
