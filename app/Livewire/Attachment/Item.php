@@ -26,11 +26,11 @@ class Item extends Component
 
     public function delete()
     {
-        $this->dispatch('setDeleteLessonMaterial', $this->item->id);
+        $this->dispatch('setDeleteAttachment', $this->item->id);
     }
 
     public function show()
     {
-        $this->dispatch('setShowLessonMaterial', $this->item->id);
+        $this->dispatch('setShowAttachment', $this->item->id);
     }
 }

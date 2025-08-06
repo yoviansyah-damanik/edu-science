@@ -22,8 +22,8 @@ class Delete extends Component
         return view('placeholders.paragraph');
     }
 
-    #[On('setDeleteLessonMaterial')]
-    public function setDeleteLessonMaterial(File $item)
+    #[On('setDeleteAttachment')]
+    public function setDeleteAttachment(File $item)
     {
         $this->item = $item;
         Flux::modal('delete-attachment-modal')

@@ -22,8 +22,8 @@ class Show extends Component
         return view('placeholders.block');
     }
 
-    #[On('setShowLessonMaterial')]
-    public function setShowLessonMaterial(File $item)
+    #[On('setShowAttachment')]
+    public function setShowAttachment(File $item)
     {
         $this->item = $item;
         Flux::modal('show-attachment-modal')

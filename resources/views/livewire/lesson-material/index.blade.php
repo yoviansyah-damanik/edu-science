@@ -271,6 +271,9 @@
         <flux:modal name="show-attachment-modal" class="w-full max-w-6xl">
             <livewire:attachment.show lazy />
         </flux:modal>
+        <flux:modal name="delete-attachment-modal" class="w-full max-w-6xl">
+            <livewire:attachment.delete lazy />
+        </flux:modal>
         <flux:modal name="delete-lesson-material-modal" class="w-full max-w-xl">
             <livewire:lesson-material.delete lazy />
         </flux:modal>
