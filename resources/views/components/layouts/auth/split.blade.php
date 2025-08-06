@@ -57,6 +57,7 @@
         </flux:radio.group>
     </div>
     @fluxScripts
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.min.js" data-navigate-once></script>
 </body>
 
 </html>
